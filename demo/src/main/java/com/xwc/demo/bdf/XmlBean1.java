@@ -7,13 +7,13 @@ package com.xwc.demo.bdf;
  */
 public class XmlBean1 {
 
-	private XmlBean2 xmlBean2;
+	private XmlBean3 xmlBean3;
 
-	public XmlBean2 getXmlBean2() {
-		return xmlBean2;
+	public XmlBean3 getXmlBean3() {
+		return xmlBean3;
 	}
 
-	public void setXmlBean2(XmlBean2 xmlBean2) {
-		this.xmlBean2 = xmlBean2;
+	public void setXmlBean3(XmlBean3 xmlBean3) {
+		this.xmlBean3 = xmlBean3;
 	}
 }

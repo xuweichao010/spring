@@ -3,12 +3,21 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xmlns:p="http://www.springframework.org/schema/p"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byType">
 
-	<bean id="xmlBean1" class="com.xwc.demo.bdf.XmlBean1">
-		<
+
+	<bean id="xmlParent" abstract="true">
+		<property name="xmlBean3" ref="xmlBean3"/>
+	</bean>
+	<bean name="xmlBean3" class="com.xwc.demo.bdf.XmlBean3"/>
+	<bean id="xmlBean1" class="com.xwc.demo.bdf.XmlBean1" parent="xmlParent">
+		<!-- 继承了xmlParent 的 <property name="xmlBean3" ref="xmlBean3"/> -->
 	</bean>
 
-	<bean id="xmlBean2" class="com.xwc.demo.bdf.XmlBean2">
+	<bean id="xmlBean2" class="com.xwc.demo.bdf.XmlBean2" parent="xmlParent">
+	</bean>
+
+	<!-- 在指定了装配模型的时候有效 -->
+	<bean id="autowireCandidateBean" autowire-candidate="false" class="com.xwc.demo.bdf.AutowireCandidateBean">
 	</bean>
 </beans>

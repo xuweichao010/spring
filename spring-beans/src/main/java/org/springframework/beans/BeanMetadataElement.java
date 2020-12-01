@@ -24,6 +24,8 @@ import org.springframework.lang.Nullable;
  *
  * @author Juergen Hoeller
  * @since 2.0
+ *  BeanDefinition:
+ *    用于存储Bean的元数据，主要存储类文件的各种元信息
  */
 public interface BeanMetadataElement {
 

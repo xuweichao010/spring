@@ -24,6 +24,9 @@ import org.springframework.lang.Nullable;
  *
  * @author Rob Harrop
  * @since 2.0
+ * BeanDefinition：
+ * 		用于存储Bean的额外信息，由AbstractBeanDefinition实现的
+ * 		其实底层使用的是Map方式存储
  */
 public interface AttributeAccessor {
 

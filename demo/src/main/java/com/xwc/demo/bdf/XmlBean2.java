@@ -6,9 +6,25 @@ package com.xwc.demo.bdf;
  * 备注：
  */
 public class XmlBean2 {
-	private XmlBean1 xmlBean;
 
-	public void setXmlBean(XmlBean1 xmlBean) {
-		this.xmlBean = xmlBean;
+
+	private XmlBean3 xmlBean3;
+
+	private AutowireCandidateBean autowireCandidateBean;
+
+	public XmlBean3 getXmlBean3() {
+		return xmlBean3;
+	}
+
+	public void setXmlBean3(XmlBean3 xmlBean3) {
+		this.xmlBean3 = xmlBean3;
+	}
+
+	public AutowireCandidateBean getAutowireCandidateBean() {
+		return autowireCandidateBean;
+	}
+
+	public void setAutowireCandidateBean(AutowireCandidateBean autowireCandidateBean) {
+		this.autowireCandidateBean = autowireCandidateBean;
 	}
 }
