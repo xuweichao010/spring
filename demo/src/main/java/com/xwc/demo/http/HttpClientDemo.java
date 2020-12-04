@@ -1,6 +1,5 @@
-package com.xwc.demo;
+package com.xwc.demo.http;
 
-import com.xwc.demo.http.BaiduRpc;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,12 +9,12 @@ import org.springframework.context.annotation.Configuration;
  * 备注：
  */
 @Configuration
-public class SpringDemo {
+@HttpClientScanner
+public class HttpClientDemo {
 	public static void main(String[] args) {
-		AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(SpringDemo.class);
-		Object bean = app.getBean("baiduRpc");
+		AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(HttpClientDemo.class);
+		BaiduRpc bean = app.getBean(BaiduRpc.class);
 		System.out.println(bean);
-
 
 	}
 }

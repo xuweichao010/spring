@@ -197,7 +197,7 @@ public abstract class AnnotationConfigUtils {
 			def.setSource(source);
 			beanDefs.add(registerPostProcessor(registry, def, PERSISTENCE_ANNOTATION_PROCESSOR_BEAN_NAME));
 		}
-		//处理Spring中事件监听的方法的后置处理器
+		//处理Bean的方法监听
 		if (!registry.containsBeanDefinition(EVENT_LISTENER_PROCESSOR_BEAN_NAME)) {
 			RootBeanDefinition def = new RootBeanDefinition(EventListenerMethodProcessor.class);
 			def.setSource(source);
