@@ -41,7 +41,7 @@ import org.springframework.util.ObjectUtils;
  * @author Juergen Hoeller
  * @author Rod Johnson
  * @since 1.1.4
- * @see org.springframework.beans.factory.BeanFactory#getBean
+ * @see BeanFactory#getBean
  * @see LazyInitTargetSource
  * @see PrototypeTargetSource
  * @see ThreadLocalTargetSource
