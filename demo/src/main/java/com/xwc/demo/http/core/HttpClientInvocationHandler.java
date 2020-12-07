@@ -101,6 +101,7 @@ public class HttpClientInvocationHandler implements InvocationHandler {
 				e.printStackTrace();
 			}
 		}
+		return null;
 
 	}
 
